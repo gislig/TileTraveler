@@ -14,6 +14,7 @@ while True:
     old_location_x = new_location_x
     old_location_y = new_location_y
 
+    print("Current location : {},{}".format(new_location_x,new_location_y))
     direction = input("Direction: ")
     if direction in "wW":
         if new_location_x > 1:
@@ -26,13 +27,13 @@ while True:
         else:
             print("Not a valid direction!")
     if direction in "nN":
-        if new_location_y > 1:
-            new_location_y -= 1
+        if new_location_y >= 1 and new_location_y < 3:
+            new_location_y += 1
         else:
             print("Not a valid direction!")
     if direction in "sS":
-        if new_location_y < 3:
-            new_location_y += 1
+        if new_location_y > 1 and new_location_y <= 3:
+            new_location_y -= 1
         else:
             print("Not a valid direction!")
 
