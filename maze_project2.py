@@ -1,5 +1,3 @@
-#You can travel: (N)orth or (E)ast or (S)outh or (W)est..
-#Victory!
 
 new_location_x = 1
 new_location_y = 1
