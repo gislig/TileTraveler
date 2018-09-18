@@ -12,11 +12,12 @@ allowTravel_West = False
 print("You can travel: (N)orth.")
 while True:
 
-    #print("Previous location : {},{}".format(new_location_x,new_location_y))
+    print("Previous location : {},{}".format(new_location_x,new_location_y))
     direction = input("Direction: ")
 
+    print(allowTravel_West)
     if direction in "wW" and allowTravel_West == True:
-        if new_location_x > 1:
+        if new_location_x > 1 and new_location_x <= 3:
             new_location_x -= 1
         else:
             print("Not a valid direction!")
@@ -26,7 +27,7 @@ while True:
         continue
 
     if direction in "eE" and allowTravel_East == True:
-        if new_location_x < 3:
+        if new_location_x >= 1 and new_location_x < 3:
             new_location_x += 1
         else:
             print("Not a valid direction!")
